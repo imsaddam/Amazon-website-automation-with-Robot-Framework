@@ -1,10 +1,12 @@
 *** Settings ***
 Library           SeleniumLibrary
-Library           DataDriver
+Library    DataDriver    file=${TestData}     sheet_name=Product
 Resource          ../Resources/LoginKeyword.robot
+Resource        ../Resources/TechnicalKeyword.robot
 
 
 
 *** Test Cases ***
-Test Case Amazon Order
-    Open Default Browser
+Amazon Order     ${Item}
+    Open Amazon
+    Add items to cart        ${Item}
