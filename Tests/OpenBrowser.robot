@@ -8,7 +8,7 @@ ${password}        12345
 
 *** Test Cases ***
 Open Amazon Login Page
-    Open Default Browser
+    Open Amazon
     Open Login Page
     Input Unsername    ${username}
     Click Continue Button

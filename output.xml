@@ -1,53 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20231026 23:30:42.233" rpa="false" schemaversion="3">
-<suite id="s1" name="TechnicalKeyword" source="e:\Testing\AmazonTest\Resources\TechnicalKeyword.robot">
-<test id="s1-t1" name="Amazon Order" line="13">
-<kw name="Add items to cart">
-<arg>${item}</arg>
-<msg timestamp="20231026 23:30:42.539" level="FAIL">Variable '${item}' not found.</msg>
-<status status="FAIL" starttime="20231026 23:30:42.538" endtime="20231026 23:30:42.542"/>
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20231028 00:37:47.059" rpa="false" schemaversion="3">
+<suite id="s1" name="Amazon Order" source="e:\Testing\AmazonTest\Tests\amazon_order.robot">
+<kw name="Open Amazon" library="LoginKeyword" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231028 00:37:47.469" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com/'.</msg>
+<status status="PASS" starttime="20231028 00:37:47.468" endtime="20231028 00:37:51.184"/>
 </kw>
-<status status="FAIL" starttime="20231026 23:30:42.537" endtime="20231026 23:30:42.543">Variable '${item}' not found.</status>
-</test>
-<test id="s1-t2" name="Amazon Order" line="13">
-<kw name="Add items to cart">
-<arg>${item}</arg>
-<msg timestamp="20231026 23:30:42.551" level="FAIL">Variable '${item}' not found.</msg>
-<status status="FAIL" starttime="20231026 23:30:42.549" endtime="20231026 23:30:42.552"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231028 00:37:51.184" endtime="20231028 00:37:51.349"/>
 </kw>
-<status status="FAIL" starttime="20231026 23:30:42.546" endtime="20231026 23:30:42.553">Variable '${item}' not found.</status>
-</test>
-<test id="s1-t3" name="Amazon Order" line="13">
-<kw name="Add items to cart">
-<arg>${item}</arg>
-<msg timestamp="20231026 23:30:42.559" level="FAIL">Variable '${item}' not found.</msg>
-<status status="FAIL" starttime="20231026 23:30:42.558" endtime="20231026 23:30:42.560"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231028 00:37:53.351" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231028 00:37:51.349" endtime="20231028 00:37:53.351"/>
 </kw>
-<status status="FAIL" starttime="20231026 23:30:42.556" endtime="20231026 23:30:42.561">Variable '${item}' not found.</status>
-</test>
-<test id="s1-t4" name="Amazon Order" line="13">
-<kw name="Add items to cart">
-<arg>${item}</arg>
-<msg timestamp="20231026 23:30:42.568" level="FAIL">Variable '${item}' not found.</msg>
-<status status="FAIL" starttime="20231026 23:30:42.566" endtime="20231026 23:30:42.568"/>
+<status status="PASS" starttime="20231028 00:37:47.468" endtime="20231028 00:37:53.351"/>
 </kw>
-<status status="FAIL" starttime="20231026 23:30:42.564" endtime="20231026 23:30:42.569">Variable '${item}' not found.</status>
+<test id="s1-t1" name="Amazon Order" line="15">
+<kw name="Add items to cart">
+<arg>${Item}</arg>
+<msg timestamp="20231028 00:37:53.355" level="FAIL">Variable '${Item}' not found.</msg>
+<status status="FAIL" starttime="20231028 00:37:53.354" endtime="20231028 00:37:53.356"/>
+</kw>
+<status status="FAIL" starttime="20231028 00:37:53.351" endtime="20231028 00:37:53.357">Variable '${Item}' not found.</status>
 </test>
-<status status="FAIL" starttime="20231026 23:30:42.241" endtime="20231026 23:30:42.572"/>
+<kw name="Close Browsers" library="LoginKeyword" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20231028 00:37:53.359" endtime="20231028 00:37:59.806"/>
+</kw>
+<status status="PASS" starttime="20231028 00:37:53.359" endtime="20231028 00:37:59.806"/>
+</kw>
+<status status="FAIL" starttime="20231028 00:37:47.068" endtime="20231028 00:37:59.807"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="4" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="4" skip="0" id="s1" name="TechnicalKeyword">TechnicalKeyword</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Amazon Order">Amazon Order</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20231026 23:30:42.545" level="WARN">Multiple tests with name 'Amazon Order' executed in suite 'TechnicalKeyword'.</msg>
-<msg timestamp="20231026 23:30:42.555" level="WARN">Multiple tests with name 'Amazon Order' executed in suite 'TechnicalKeyword'.</msg>
-<msg timestamp="20231026 23:30:42.563" level="WARN">Multiple tests with name 'Amazon Order' executed in suite 'TechnicalKeyword'.</msg>
+<msg timestamp="20231028 00:37:47.437" level="ERROR">Error in file 'e:\Testing\AmazonTest\Resources\TechnicalKeyword.robot' on line 8: Setting 'Test Template' is not allowed in resource file.</msg>
+<msg timestamp="20231028 00:37:47.453" level="ERROR">[ DataDriver ] Error in robot file:
+  File "e:\Testing\AmazonTest\Tests\amazon_order.robot", line 0</msg>
+<msg timestamp="20231028 00:37:47.454" level="ERROR">In source file:
+  File "e:\Testing\AmazonTest\Tests\..\TestData\Data.xlsx", line 0</msg>
+<msg timestamp="20231028 00:37:47.467" level="ERROR">Calling method '_start_suite' of listener 'DataDriver' failed: ImportError: Requirements (pandas, openpyxl) for XLSX support are not installed.
+    Use 'pip install -U robotframework-datadriver[XLS]' to install XLSX support.</msg>
 </errors>
 </robot>

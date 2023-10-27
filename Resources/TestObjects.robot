@@ -11,8 +11,9 @@ ${sign_button}               xpath://*[@id="signInSubmit"]
 ${search_input}              xpath://*[@id="twotabsearchtextbox"]
 ${submit_search}             xpath://*[@id="nav-search-submit-button"]
 
-${first_product}             xpath:(//*[@class="s-image"])[1]
+${first_product}             xpath:(//*[@class="s-image"])[2]
 ${add_to_cart}               xpath://*[@id="add-to-cart-button"]
 ${proceed_checkout}          xpath://*[@id="sc-buy-box-ptc-button"]/span/input
+${cart_button}               xpath://*[@id="nav-cart"]
 
 
